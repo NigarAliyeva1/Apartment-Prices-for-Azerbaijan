@@ -2,7 +2,7 @@ table BakuApartmentData
 	lineageTag: d59a27b6-0da6-41e1-aec1-5bfe5a689374
 
 	column price
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: 83bef7a8-e2b9-4762-85f1-64dad9df8515
 		summarizeBy: sum
@@ -37,66 +37,62 @@ table BakuApartmentData
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column 'floor.1'
+	column apartment_floor
 		dataType: int64
 		formatString: 0
 		lineageTag: 21f38288-847c-41b3-b93f-d5a9856066a0
 		summarizeBy: sum
-		sourceColumn: floor.1
+		sourceColumn: apartment_floor
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'floor.2'
+	column building_floor_count
 		dataType: int64
 		formatString: 0
 		lineageTag: 2445a4d7-fcd6-4db6-b05c-02137ce03e22
 		summarizeBy: sum
-		sourceColumn: floor.2
+		sourceColumn: building_floor_count
 
 		annotation SummarizationSetBy = Automatic
 
 	column new_building
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: 0ccaedf7-eafc-4855-9437-1d88537f0953
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: new_building
 
 		annotation SummarizationSetBy = Automatic
 
 	column has_repair
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: dcc77c8e-85a8-499c-beee-a872cad19217
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: has_repair
 
 		annotation SummarizationSetBy = Automatic
 
 	column has_bill_of_sale
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: 320f67a8-76b1-44e6-8840-ed02a9f81116
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: has_bill_of_sale
 
 		annotation SummarizationSetBy = Automatic
 
 	column has_mortgage
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: a09cb423-f835-49ea-9622-261e2d07ae11
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: has_mortgage
 
 		annotation SummarizationSetBy = Automatic
 
-	column Column1
+	column row_num
 		dataType: int64
 		formatString: 0
 		lineageTag: 049ef4e6-c9f2-4beb-8cdf-b80391407c45
 		summarizeBy: sum
-		sourceColumn: Column1
+		sourceColumn: row_num
 
 		annotation SummarizationSetBy = Automatic
 
@@ -124,9 +120,15 @@ table BakuApartmentData
 				    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced Value12",{{"floor", type text}}),
 				    #"Replaced Value13" = Table.ReplaceValue(#"Changed Type1","/2024","",Replacer.ReplaceText,{"floor"}),
 				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value13", "floor", Splitter.SplitTextByDelimiter("/", QuoteStyle.Csv), {"floor.1", "floor.2"}),
-				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"floor.1", Int64.Type}, {"floor.2", Int64.Type}})
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"floor.1", Int64.Type}, {"floor.2", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type2",{{"floor.1", "apartment_floor"}, {"floor.2", "building_floor_count"}}),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Renamed Columns",{{"new_building", type text}, {"has_repair", type text}, {"has_bill_of_sale", type text}, {"has_mortgage", type text}}),
+				    #"Replaced Value14" = Table.ReplaceValue(#"Changed Type3","0","No",Replacer.ReplaceText,{"new_building", "has_repair", "has_bill_of_sale", "has_mortgage"}),
+				    #"Replaced Value15" = Table.ReplaceValue(#"Replaced Value14","1","Yes",Replacer.ReplaceText,{"new_building", "has_repair", "has_bill_of_sale", "has_mortgage"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Replaced Value15",{{"Column1", "row_num"}}),
+				    #"Replaced Value16" = Table.ReplaceValue(#"Renamed Columns1",6800000,3500000,Replacer.ReplaceValue,{"price"})
 				in
-				    #"Changed Type2"
+				    #"Replaced Value16"
 
 	annotation PBI_NavigationStepName = Navigation
 
