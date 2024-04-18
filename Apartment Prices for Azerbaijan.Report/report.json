@@ -1,0 +1,177 @@
+{
+  "config": "{\"version\":\"5.52\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.52\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection",
+      "config": "{}",
+      "name": "Pod",
+      "referenceScope": 1
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "map_(2)4857048826385255.png",
+            "path": "map_(2)4857048826385255.png",
+            "type": 100
+          },
+          {
+            "name": "plans_(1)6316415872925316.png",
+            "path": "plans_(1)6316415872925316.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#080F25'\"}}}}},\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"url\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0e314bc09d10a827c793\",\"layouts\":[{\"id\":0,\"position\":{\"x\":312.17805681868435,\"y\":21.501034262794636,\"z\":9001,\"width\":452.8571428571429,\"height\":181.42857142857144,\"tabOrder\":3007}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Apartment Prices for Azerbaijan Market\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"32pt\",\"color\":\"#ffffff\"}}]},{\"textRuns\":[{\"value\":\"Dashboard\",\"textStyle\":{\"fontSize\":\"28pt\",\"color\":\"#ffffff\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 181.43,
+          "width": 452.86,
+          "x": 312.18,
+          "y": 21.50,
+          "z": 9001.00
+        },
+        {
+          "config": "{\"name\":\"13a827a4dae7ceaa70ed\",\"layouts\":[{\"id\":0,\"position\":{\"x\":311.6521739130435,\"y\":385.39130434782606,\"z\":1000,\"width\":151.65217391304347,\"height\":154.43478260869566,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(BakuApartmentData.Column1)\"}],\"Category\":[{\"queryRef\":\"BakuApartmentData.has_bill_of_sale\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BakuApartmentData\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Column1\"}},\"Function\":5},\"Name\":\"Sum(BakuApartmentData.Column1)\",\"NativeReferenceName\":\"Count of Column1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"has_bill_of_sale\"},\"Name\":\"BakuApartmentData.has_bill_of_sale\",\"NativeReferenceName\":\"Sum of has_bill_of_sale\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Column1\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9A91FB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BakuApartmentData\"}},\"Property\":\"has_bill_of_sale\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#57C2FF'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BakuApartmentData\"}},\"Property\":\"has_bill_of_sale\"}},\"Right\":{\"Literal\":{\"Value\":\"1L\"}}}}}]}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":-0.5}}}}}}}],\"title\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 154.43,
+          "width": 151.65,
+          "x": 311.65,
+          "y": 385.39,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"232dce809c06dbc0a197\",\"layouts\":[{\"id\":0,\"position\":{\"x\":762.4347826086956,\"y\":41.73913043478261,\"z\":8000,\"width\":502.2608695652174,\"height\":297.7391304347826,\"tabOrder\":3004}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"BakuApartmentData.rooms\",\"active\":true}],\"Y\":[{\"queryRef\":\"Avg(BakuApartmentData.price)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BakuApartmentData\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"rooms\"},\"Name\":\"BakuApartmentData.rooms\",\"NativeReferenceName\":\"Sum of rooms\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price\"}},\"Function\":1},\"Name\":\"Avg(BakuApartmentData.price)\",\"NativeReferenceName\":\"Average of price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"lineStyles\":[{\"properties\":{\"lineStyle\":{\"expr\":{\"Literal\":{\"Value\":\"'solid'\"}}},\"strokeLineJoin\":{\"expr\":{\"Literal\":{\"Value\":\"'miter'\"}}},\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'linear'\"}}},\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9A91FB'\"}}}}}},\"selector\":{\"metadata\":\"Avg(BakuApartmentData.price)\"}},{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"50D\"}}}}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"gridlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 297.74,
+          "width": 502.26,
+          "x": 762.43,
+          "y": 41.74,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"415c495f08b36be05904\",\"layouts\":[{\"id\":0,\"position\":{\"x\":707.9396984924623,\"y\":390.7537688442211,\"z\":3000,\"width\":168.84422110552762,\"height\":153.16582914572862,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(BakuApartmentData.Column1)\"}],\"Category\":[{\"queryRef\":\"BakuApartmentData.has_mortgage\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BakuApartmentData\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Column1\"}},\"Function\":5},\"Name\":\"Sum(BakuApartmentData.Column1)\",\"NativeReferenceName\":\"Count of Column1\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"has_mortgage\"},\"Name\":\"BakuApartmentData.has_mortgage\",\"NativeReferenceName\":\"Sum of has_mortgage\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Column1\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#57C2FF'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BakuApartmentData\"}},\"Property\":\"has_mortgage\"}},\"Right\":{\"Literal\":{\"Value\":\"1L\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9A91FB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BakuApartmentData\"}},\"Property\":\"has_mortgage\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}}}],\"title\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 153.17,
+          "width": 168.84,
+          "x": 707.94,
+          "y": 390.75,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"50479f87651e0238c9d4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16.25,\"y\":138.125,\"z\":9005,\"width\":61.25,\"height\":64.375,\"tabOrder\":3011}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"plans_(1)6316415872925316.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 64.38,
+          "width": 61.25,
+          "x": 16.25,
+          "y": 138.13,
+          "z": 9005.00
+        },
+        {
+          "config": "{\"name\":\"7e1a5facc6931252bee9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1098.6934673366834,\"y\":426.93467336683415,\"z\":4000,\"width\":113.36683417085426,\"height\":129.04522613065325,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"BakuApartmentData.new_building\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(BakuApartmentData.Column1)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BakuApartmentData\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"new_building\"},\"Name\":\"BakuApartmentData.new_building\",\"NativeReferenceName\":\"Sum of new_building\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Column1\"}},\"Function\":5},\"Name\":\"Sum(BakuApartmentData.Column1)\",\"NativeReferenceName\":\"Count of Column1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Column1\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9A91FB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BakuApartmentData\"}},\"Property\":\"new_building\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#57C2FF'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BakuApartmentData\"}},\"Property\":\"new_building\"}},\"Right\":{\"Literal\":{\"Value\":\"1L\"}}}}}]}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 129.05,
+          "width": 113.37,
+          "x": 1098.69,
+          "y": 426.93,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"7f9afffbb8c74491bed7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11.130434782608695,\"y\":20.869565217391305,\"z\":0,\"width\":289.39130434782606,\"height\":680.3478260869565,\"tabOrder\":3006}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 680.35,
+          "width": 289.39,
+          "x": 11.13,
+          "y": 20.87,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c5c9620c20d4a6d0b133\",\"layouts\":[{\"id\":0,\"position\":{\"x\":909.3467336683417,\"y\":404.02010050251255,\"z\":2000,\"width\":141.10552763819095,\"height\":153.16582914572862,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"BakuApartmentData.has_repair\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(BakuApartmentData.Column1)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BakuApartmentData\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"has_repair\"},\"Name\":\"BakuApartmentData.has_repair\",\"NativeReferenceName\":\"Sum of has_repair\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Column1\"}},\"Function\":5},\"Name\":\"Sum(BakuApartmentData.Column1)\",\"NativeReferenceName\":\"Count of Column1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"Column1\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#9A91FB'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BakuApartmentData\"}},\"Property\":\"has_repair\"}},\"Right\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#57C2FF'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"BakuApartmentData\"}},\"Property\":\"has_repair\"}},\"Right\":{\"Literal\":{\"Value\":\"1L\"}}}}}]}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}}}],\"title\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 153.17,
+          "width": 141.11,
+          "x": 909.35,
+          "y": 404.02,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"cb567f12e6d2b0591453\",\"layouts\":[{\"id\":0,\"position\":{\"x\":76.66666666666667,\"y\":133.33333333333334,\"z\":7000,\"width\":212.22222222222223,\"height\":108.88888888888889,\"tabOrder\":3003}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"BakuApartmentData.rooms\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BakuApartmentData\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"rooms\"},\"Name\":\"BakuApartmentData.rooms\",\"NativeReferenceName\":\"rooms\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}],\"numericInputStyle\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 108.89,
+          "width": 212.22,
+          "x": 76.67,
+          "y": 133.33,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"df0ecfee00b8c0c501c0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":15.454545454545453,\"y\":55.45454545454545,\"z\":9003,\"width\":62.72727272727272,\"height\":48.18181818181818,\"tabOrder\":3009}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"map_(2)4857048826385255.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 48.18,
+          "width": 62.73,
+          "x": 15.45,
+          "y": 55.45,
+          "z": 9003.00
+        },
+        {
+          "config": "{\"name\":\"eaca7da513dc0bca8d5d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":311.42029284352907,\"y\":211.5507237037884,\"z\":6000,\"width\":192,\"height\":130.7826086956522,\"tabOrder\":3002}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(BakuApartmentData.price)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BakuApartmentData\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price\"}},\"Function\":3},\"Name\":\"Sum(BakuApartmentData.price)\",\"NativeReferenceName\":\"Min of price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price\"}},\"Function\":3}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 130.78,
+          "width": 192.00,
+          "x": 311.42,
+          "y": 211.55,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"f2b5e9e6eeb7016cd973\",\"layouts\":[{\"id\":0,\"position\":{\"x\":73.63636363636363,\"y\":59.090909090909086,\"z\":9000,\"width\":217.27272727272725,\"height\":48.18181818181818,\"tabOrder\":3005}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"BakuApartmentData.location\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BakuApartmentData\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"location\"},\"Name\":\"BakuApartmentData.location\",\"NativeReferenceName\":\"location\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}},\"padding\":{\"expr\":{\"Literal\":{\"Value\":\"5D\"}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"header\":[{\"properties\":{\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 48.18,
+          "width": 217.27,
+          "x": 73.64,
+          "y": 59.09,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"f5ea7e8bc850b803975b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":533.1304377710654,\"y\":211.73912950088987,\"z\":5000,\"width\":191.66666666666669,\"height\":130,\"tabOrder\":3001}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(BakuApartmentData.price)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"b\",\"Entity\":\"BakuApartmentData\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price\"}},\"Function\":4},\"Name\":\"Sum(BakuApartmentData.price)\",\"NativeReferenceName\":\"Max of price\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"b\"}},\"Property\":\"price\"}},\"Function\":4}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#101935'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 130.00,
+          "width": 191.67,
+          "x": 533.13,
+          "y": 211.74,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

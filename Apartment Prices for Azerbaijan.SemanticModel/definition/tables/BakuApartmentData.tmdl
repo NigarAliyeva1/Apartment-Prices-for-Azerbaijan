@@ -1,0 +1,134 @@
+table BakuApartmentData
+	lineageTag: d59a27b6-0da6-41e1-aec1-5bfe5a689374
+
+	column price
+		dataType: int64
+		formatString: 0
+		lineageTag: 83bef7a8-e2b9-4762-85f1-64dad9df8515
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: a0d54aa4-3d5f-448c-a36e-0624ad462894
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column rooms
+		dataType: int64
+		formatString: 0
+		lineageTag: 2196875d-370c-43cd-99a6-2ff65ea4e4fd
+		summarizeBy: sum
+		sourceColumn: rooms
+
+		annotation SummarizationSetBy = Automatic
+
+	column square
+		dataType: double
+		lineageTag: 9f2f0c14-b3fd-4121-8ee7-56216118ec18
+		summarizeBy: sum
+		sourceColumn: square
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'floor.1'
+		dataType: int64
+		formatString: 0
+		lineageTag: 21f38288-847c-41b3-b93f-d5a9856066a0
+		summarizeBy: sum
+		sourceColumn: floor.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'floor.2'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2445a4d7-fcd6-4db6-b05c-02137ce03e22
+		summarizeBy: sum
+		sourceColumn: floor.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column new_building
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ccaedf7-eafc-4855-9437-1d88537f0953
+		summarizeBy: sum
+		sourceColumn: new_building
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_repair
+		dataType: int64
+		formatString: 0
+		lineageTag: dcc77c8e-85a8-499c-beee-a872cad19217
+		summarizeBy: sum
+		sourceColumn: has_repair
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_bill_of_sale
+		dataType: int64
+		formatString: 0
+		lineageTag: 320f67a8-76b1-44e6-8840-ed02a9f81116
+		summarizeBy: sum
+		sourceColumn: has_bill_of_sale
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_mortgage
+		dataType: int64
+		formatString: 0
+		lineageTag: a09cb423-f835-49ea-9622-261e2d07ae11
+		summarizeBy: sum
+		sourceColumn: has_mortgage
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column1
+		dataType: int64
+		formatString: 0
+		lineageTag: 049ef4e6-c9f2-4beb-8cdf-b80391407c45
+		summarizeBy: sum
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BakuApartmentData = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\nigar\Downloads\BakuApartmentData.xlsx"), null, true),
+				    BakuApartmentData_Sheet = Source{[Item="BakuApartmentData",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(BakuApartmentData_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Column1", Int64.Type}, {"price", Int64.Type}, {"location", type text}, {"rooms", Int64.Type}, {"square", type number}, {"floor", type any}, {"new_building", Int64.Type}, {"has_repair", Int64.Type}, {"has_bill_of_sale", Int64.Type}, {"has_mortgage", Int64.Type}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","É™","ə",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","Æ#(008F)","Ə",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","Ä±","ı",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","Åžah Ä°smayıl Xətai m.","Xətai m.",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","Ä°","İ",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","ÅŸ","ş",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","Ã§","ç",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","ÄŸ","ğ",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","Ã¶","ö",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value9" = Table.ReplaceValue(#"Replaced Value8","Ã¼","ü",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value10" = Table.ReplaceValue(#"Replaced Value9","İçəri Åžəhər m.","İçərişəhər m.",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value10","Åž","Ş",Replacer.ReplaceText,{"location"}),
+				    #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11","Ã‡","Ç",Replacer.ReplaceText,{"location"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Replaced Value12",{{"floor", type text}}),
+				    #"Replaced Value13" = Table.ReplaceValue(#"Changed Type1","/2024","",Replacer.ReplaceText,{"floor"}),
+				    #"Split Column by Delimiter" = Table.SplitColumn(#"Replaced Value13", "floor", Splitter.SplitTextByDelimiter("/", QuoteStyle.Csv), {"floor.1", "floor.2"}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Split Column by Delimiter",{{"floor.1", Int64.Type}, {"floor.2", Int64.Type}})
+				in
+				    #"Changed Type2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
