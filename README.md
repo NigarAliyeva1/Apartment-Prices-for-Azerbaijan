@@ -6,8 +6,6 @@ This repository hosts a Power BI dashboard created using a comprehensive dataset
 ## Power BI Dashboard
 The primary focus of this repository is the Power BI dashboard, which offers a user-friendly interface to analyze the real estate market in Azerbaijan. The dashboard allows users to explore price trends, distribution of properties by location and size, and other key metrics. It serves as a valuable tool for real estate professionals, analysts, policymakers, and individuals seeking properties in Azerbaijan.
 
-You can access the Power BI dashboard [here](link_to_power_bi_dashboard).
-
 ## Dataset Details
 - **Number of Rows:** 39,300
 - **Number of Columns:** 10
@@ -25,3 +23,5 @@ You can access the Power BI dashboard [here](link_to_power_bi_dashboard).
 
 ## Data Scraping Code
 If you're interested in the scraping code used to gather this dataset, you can find it [here](https://github.com/AzadShahvaladov/Bina.azDataScraping).
+
+![Screenshot 2024-04-18 232916](https://github.com/NigarAliyeva1/Apartment-Prices-for-Azerbaijan/assets/112957859/561852dc-b1f0-46d6-9415-6e36c049090d)
