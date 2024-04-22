@@ -1,4 +1,4 @@
-# Real Estate Market Dashboard with Power BI
+# Apartment Prices for Azerbaijan Dashboard with Power BI
 
 ## Overview
 This repository hosts a Power BI dashboard created using a comprehensive dataset of real estate listings from the Azerbaijani market. The dataset comprises 39,300 rows and includes 10 columns, each providing essential information about properties available for sale in various locations across Azerbaijan. The Power BI dashboard provides interactive visualizations and insights derived from this dataset, enabling users to explore various aspects of the real estate market in Azerbaijan.
